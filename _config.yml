@@ -1,0 +1,30 @@
+# Jekyll Configuration for GitHub Pages
+title: "Charles Tanauan - Official Affidavit 2025"
+description: "Official Affidavit Statement with Evidence Gallery"
+baseurl: ""
+url: "https://hoopstreet.github.io"
+
+# Theme settings
+theme: jekyll-theme-minimal
+
+# Customization
+show_downloads: false
+google_analytics:
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Permalinks
+permalink: /:title/
+
+# Include directories
+include:
+  - _pages
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
