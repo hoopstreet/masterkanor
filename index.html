@@ -18,7 +18,7 @@
             padding: 2rem 1rem;
         }
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
             background: #ffffff;
             padding: 3rem;
@@ -82,6 +82,186 @@
             font-size: 0.8rem;
             color: #999;
         }
+
+        /* ============================================================
+           EVIDENCE GALLERY SECTION - GALLERY VIEW
+           ============================================================ */
+        .evidence-section {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 4px double #1a1a1a;
+        }
+        .evidence-title {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .evidence-statement {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #c0392b;
+            background: #fff3cd;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            margin: 1rem 0 2rem 0;
+            border: 2px solid #c0392b;
+            font-family: 'Times New Roman', Times, serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .evidence-subtitle {
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        .evidence-disclaimer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #c0392b;
+            background: #fff3cd;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* GALLERY GRID */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* GALLERY CARD */
+        .gallery-card {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+        .gallery-card:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        .gallery-card-header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 0.6rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+        }
+        .gallery-card-header .exhibit {
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .gallery-card-header .badge {
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            letter-spacing: 0.3px;
+        }
+        .badge.document { background: #27ae60; }
+        .badge.screenshot { background: #8e44ad; }
+        .badge.physical { background: #d35400; }
+        .badge.testimony { background: #2980b9; }
+        .badge.cyber { background: #c0392b; }
+        .badge.medical { background: #16a085; }
+        .badge.legal { background: #2c3e50; }
+
+        .gallery-card-body {
+            padding: 1rem 1.2rem;
+        }
+        .gallery-card-body .title {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            color: #1a1a1a;
+        }
+        .gallery-card-body .desc {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+        }
+        .gallery-card-body .meta {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.4rem;
+        }
+        .gallery-card-body .meta strong {
+            color: #1a1a1a;
+        }
+
+        /* THUMBNAIL ROW */
+        .thumb-row {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+            margin-top: 0.6rem;
+            padding-top: 0.6rem;
+            border-top: 1px solid #eee;
+        }
+        .thumb-item {
+            background: #e9ecef;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 0.3rem 0.6rem;
+            font-size: 0.7rem;
+            font-family: monospace;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .thumb-item .icon {
+            font-size: 1rem;
+        }
+
+        /* TAGS */
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin-top: 0.6rem;
+        }
+        .tag {
+            background: #eee;
+            padding: 0.1rem 0.6rem;
+            border-radius: 10px;
+            font-size: 0.65rem;
+            color: #555;
+            font-weight: 600;
+        }
+        .tag.para {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        /* MAPPING */
+        .mapping {
+            margin-top: 0.6rem;
+            padding-top: 0.6rem;
+            border-top: 1px dashed #ddd;
+            font-size: 0.8rem;
+            color: #555;
+        }
+        .mapping strong {
+            color: #1a1a1a;
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 1.2rem;
@@ -92,11 +272,30 @@
             .content {
                 font-size: 0.95rem;
             }
+            .evidence-title {
+                font-size: 1.2rem;
+            }
+            .evidence-statement {
+                font-size: 0.85rem;
+                padding: 0.8rem 1rem;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+
+        <!-- ==========================================================
+             PART 1: OFFICIAL AFFIDAVIT - 87 PARAGRAPHS - UNCHANGED
+             ========================================================== -->
+
         <div class="document-title">BACKUP OFFICIAL AFFIDAVIT STATEMENT OF CHARLES TANAUAN CASE PRESENTATION 2025 (1)</div>
 
         <div class="content">
@@ -336,6 +535,276 @@
             Subscribed and sworn to this 20th day of October 2025 in Imus, Cavite.<br />
             Notary Public &bull; Doc. No. ___ &bull; Page No. ___ &bull; Book No. ___ &bull; Series of 2025
         </div>
-    </div>
+
+        <!-- ============================================================
+             PART 2: EVIDENCE GALLERY - GALLERY VIEW
+             ============================================================ -->
+
+        <div class="evidence-section">
+            <div class="evidence-title">&#9889; EVIDENCE GALLERY</div>
+
+            <div class="evidence-statement">
+                &#9888; AKO AY BIKTIMA NG CYBERCRIME, HINDI AWTORISADONG EKSPERIMENTASYON,<br />
+                AT NG GRUPONG IT SHADOW, BUSINESS MIRROR,<br />
+                AT MANIPULASYONG MAY KINALAMAN SA CYBERSECURITY SCHEME.
+            </div>
+
+            <div class="evidence-subtitle">Unofficial Insertion Evidence &bull; Supporting Documentation &bull; Case Reference</div>
+
+            <div class="evidence-disclaimer">
+                <strong>&#9432; DISCLAIMER:</strong> This section contains UNOFFICIAL insertion evidence for case reference and mapping purposes only. All evidence is subject to verification and authentication.
+            </div>
+
+            <!-- GALLERY GRID -->
+            <div class="gallery-grid">
+
+                <!-- CARD 1 -->
+                <div class="gallery-card">
+                    <div class="gallery-card-header">
+                        <span class="exhibit">&#128220; Exhibit A-1</span>
+                        <span class="badge document">DOCUMENT</span>
+                    </div>
+                    <div class="gallery-card-body">
+                        <div class="title">Coinbase Crypto Wallet &amp; Casino Invoices</div>
+                        <div class="desc">Screenshots of unauthorized crypto wallet activities and casino platform invoices discovered on Mario's computer showing revenue share operations.</div>
+                        <div class="meta"><strong>Source:</strong> Mario Nalda Cadisal's Computer</div>
+                        <div class="meta"><strong>Date:</strong> May 2023</div>
+                        <div class="thumb-row">
+                            <span class="thumb-item"><span class="icon">&#128444;</span> Wallet 1</span>
+                            <span class="thumb-item"><span class="icon">&#128444;</span> Wallet 2</span>
+                            <span class="thumb-item"><span class="icon">&#128203;</span> Invoice 1</span>
+                            <span class="thumb-item"><span class="icon">&#128203;</span> Invoice 2</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag para">&#9679; Para 16</span>
+                            <span class="tag para">&#9679; Para 17</span>
+                            <span class="tag para">&#9679; Para 18</span>
+                            <span class="tag">Crypto</span>
+                            <span class="tag">Casino</span>
+                        </div>
+                        <div class="mapping"><strong>Mapping:</strong> Supports Para 16-18 - unauthorized casino operations and crypto wallet activities.</div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="gallery-card">
+                    <div class="gallery-card-header">
+                        <span class="exhibit">&#128220; Exhibit A-2</span>
+                        <span class="badge screenshot">SCREENSHOT</span>
+                    </div>
+                    <div class="gallery-card-body">
+                        <div class="title">Telegram Financial Transactions</div>
+                        <div class="desc">Screenshots of Telegram conversations where respondents funneled money from influencer cuts and platform commissions to conceal illegal activities.</div>
+                        <div class="meta"><strong>Source:</strong> Respondents' Telegram Accounts</div>
+                        <div class="meta"><strong>Date:</strong> January 2024</div>
+                        <div class="thumb-row">
+                            <span class="thumb-item"><span class="icon">&#128172;</span> Chat 1</span>
+                            <span class="thumb-item"><span class="icon">&#128172;</span> Chat 2</span>
+                            <span class="thumb-item"><span class="icon">&#128172;</span> Chat 3</span>
+                            <span class="thumb-item"><span class="icon">&#128200;</span> Transactions</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag para">&#9679; Para 18</span>
+                            <span class="tag">Telegram</span>
+                            <span class="tag">Financial</span>
+                            <span class="tag">Concealment</span>
+                        </div>
+                        <div class="mapping"><strong>Mapping:</strong> Directly supports Para 18 - Telegram used to conceal illegal financial transactions.</div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="gallery-card">
+                    <div class="gallery-card-header">
+                        <span class="exhibit">&#128220; Exhibit B-1</span>
+                        <span class="badge physical">PHYSICAL</span>
+                    </div>
+                    <div class="gallery-card-body">
+                        <div class="title">Rat Poison Evidence - Attempted Poisoning</div>
+                        <div class="desc">Physical evidence of rat poison container found in Mario's possession, confirmed by laboratory analysis showing newly opened rat poison.</div>
+                        <div class="meta"><strong>Source:</strong> Mario's Work Area - Bootcamp</div>
+                        <div class="meta"><strong>Date:</strong> January 5, 2024</div>
+                        <div class="thumb-row">
+                            <span class="thumb-item"><span class="icon">&#128269;</span> Container</span>
+                            <span class="thumb-item"><span class="icon">&#128269;</span> Lab Report</span>
+                            <span class="thumb-item"><span class="icon">&#128269;</span> Location</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag para">&#9679; Para 24</span>
+                            <span class="tag para">&#9679; Para 25</span>
+                            <span class="tag para">&#9679; Para 26</span>
+                            <span class="tag para">&#9679; Para 27</span>
+                            <span class="tag">Physical</span>
+                            <span class="tag">Poison</span>
+                        </div>
+                        <div class="mapping"><strong>Mapping:</strong> Supports Para 24-27 - discovery of rat poison and attempted poisoning after confrontation.</div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="gallery-card">
+                    <div class="gallery-card-header">
+                        <span class="exhibit">&#128220; Exhibit C-1</span>
+                        <span class="badge cyber">CYBER</span>
+                    </div>
+                    <div class="gallery-card-body">
+                        <div class="title">Evidence Tampering - Carl Justin Pagaspas</div>
+                        <div class="desc">Documentation of deleted files, RSS file conversion, corrupted USB data, and laptop damage involving Carl Justin Pagaspas.</div>
+                        <div class="meta"><strong>Source:</strong> Multiple Devices: Laptop, USB, Computer Units</div>
+                        <div class="meta"><strong>Date:</strong> January 8-13, 2024</div>
+                        <div class="thumb-row">
+                            <span class="thumb-item"><span class="icon">&#128190;</span> USB</span>
+                            <span class="thumb-item"><span class="icon">&#128187;</span> Laptop</span>
+                            <span class="thumb-item"><span class="icon">&#128203;</span> Report</span>
+                            <span class="thumb-item"><span class="icon">&#128190;</span> Files</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag para">&#9679; Para 30-47</span>
+                            <span class="tag">Tampering</span>
+                            <span class="tag">Corruption</span>
+                            <span class="tag">AnyDesk</span>
+                        </div>
+                        <div class="mapping"><strong>Mapping:</strong> Documents evidence tampering described in Para 30-47 - file conversion, corruption, obstruction.</div>
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="gallery-card">
+                    <div class="gallery-card-header">
+                        <span class="exhibit">&#128220; Exhibit D-1</span>
+                        <span class="badge testimony">TESTIMONY</span>
+                    </div>
+                    <div class="gallery-card-body">
+                        <div class="title">Insider Operations &amp; Cybersecurity Cover-Up</div>
+                        <div class="desc">Testimony regarding Mario and Lawrence as insiders, and Carl Justin Pagaspas as cybersecurity personnel bribed to delete evidence.</div>
+                        <div class="meta"><strong>Source:</strong> Affiant's Personal Knowledge</div>
+                        <div class="meta"><strong>Date:</strong> Post-January 2024</div>
+                        <div class="thumb-row">
+                            <span class="thumb-item"><span class="icon">&#128172;</span> Statement</span>
+                            <span class="thumb-item"><span class="icon">&#128220;</span> Evidence</span>
+                            <span class="thumb-item"><span class="icon">&#128203;</span> Report</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag para">&#9679; Para 50</span>
+                            <span class="tag para">&#9679; Para 51</span>
+                            <span class="tag para">&#9679; Para 52</span>
+                            <span class="tag para">&#9679; Para 53</span>
+                            <span class="tag">Insider</span>
+                            <span class="tag">Cover-up</span>
+                        </div>
+                        <div class="mapping"><strong>Mapping:</strong> Supports Para 50-53 - insider operations, identity theft, obstruction of legal remedies.</div>
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="gallery-card">
+                    <div class="gallery-card-header">
+                        <span class="exhibit">&#128220; Exhibit E-1</span>
+                        <span class="badge testimony">TESTIMONY</span>
+                    </div>
+                    <div class="gallery-card-body">
+                        <div class="title">IT Shadow / Business Mirror - Psychological Torture</div>
+                        <div class="desc">Testimony regarding the "IT Shadow" or "Business Mirror" group, microchip implantation, brain reader technology, and "Baliktaran" reverse psychology torture.</div>
+                        <div class="meta"><strong>Source:</strong> Affiant's Personal Experience</div>
+                        <div class="meta"><strong>Date:</strong> 2024-2025</div>
+                        <div class="thumb-row">
+                            <span class="thumb-item"><span class="icon">&#128172;</span> Testimony 1</span>
+                            <span class="thumb-item"><span class="icon">&#128172;</span> Testimony 2</span>
+                            <span class="thumb-item"><span class="icon">&#128220;</span> Evidence</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag para">&#9679; Para 54-62</span>
+                            <span class="tag">IT Shadow</span>
+                            <span class="tag">Microchip</span>
+                            <span class="tag">Torture</span>
+                            <span class="tag">Surveillance</span>
+                        </div>
+                        <div class="mapping"><strong>Mapping:</strong> Supports Para 54-62 - IT Shadow/Business Mirror operations, unauthorized experimentation, psychological torture strategies.</div>
+                    </div>
+                </div>
+
+                <!-- CARD 7 -->
+                <div class="gallery-card">
+                    <div class="gallery-card-header">
+                        <span class="exhibit">&#128220; Exhibit F-1</span>
+                        <span class="badge legal">LEGAL</span>
+                    </div>
+                    <div class="gallery-card-body">
+                        <div class="title">Legal Filing History &amp; NBI/PNP Responses</div>
+                        <div class="desc">Documentation of all legal filings: RACU Region 8 (Jan 5, 2024), Raffy Tulfo - NBI QC, NBI Cavite, NBI Bacoor (July 28, 2025).</div>
+                        <div class="meta"><strong>Source:</strong> Official Filing Records</div>
+                        <div class="meta"><strong>Date:</strong> 2024-2025</div>
+                        <div class="thumb-row">
+                            <span class="thumb-item"><span class="icon">&#128203;</span> Filing 1</span>
+                            <span class="thumb-item"><span class="icon">&#128203;</span> Filing 2</span>
+                            <span class="thumb-item"><span class="icon">&#128203;</span> Filing 3</span>
+                            <span class="thumb-item"><span class="icon">&#128203;</span> Filing 4</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag para">&#9679; Para 82</span>
+                            <span class="tag para">&#9679; Para 83</span>
+                            <span class="tag para">&#9679; Para 84</span>
+                            <span class="tag para">&#9679; Para 85</span>
+                            <span class="tag para">&#9679; Para 86</span>
+                            <span class="tag para">&#9679; Para 87</span>
+                            <span class="tag">Legal</span>
+                            <span class="tag">NBI</span>
+                            <span class="tag">PNP</span>
+                        </div>
+                        <div class="mapping"><strong>Mapping:</strong> Documents legal process in Para 82-87 - initial filing, referrals, lack of action.</div>
+                    </div>
+                </div>
+
+                <!-- CARD 8 -->
+                <div class="gallery-card">
+                    <div class="gallery-card-header">
+                        <span class="exhibit">&#128220; Exhibit G-1</span>
+                        <span class="badge medical">MEDICAL</span>
+                    </div>
+                    <div class="gallery-card-body">
+                        <div class="title">Medical Records &amp; Psychological Evaluation</div>
+                        <div class="desc">Medical records documenting sleep deprivation, psychological trauma, paranoia, and ongoing mental health impacts from unauthorized experimentation.</div>
+                        <div class="meta"><strong>Source:</strong> Medical Professionals / Hospitals</div>
+                        <div class="meta"><strong>Date:</strong> 2024-2025</div>
+                        <div class="thumb-row">
+                            <span class="thumb-item"><span class="icon">&#128220;</span> Med Report</span>
+                            <span class="thumb-item"><span class="icon">&#128220;</span> Psych Eval</span>
+                            <span class="thumb-item"><span class="icon">&#128220;</span> Prescriptions</span>
+                            <span class="thumb-item"><span class="icon">&#128220;</span> Diagnosis</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag para">&#9679; Para 63-81</span>
+                            <span class="tag">Medical</span>
+                            <span class="tag">Psychological</span>
+                            <span class="tag">Trauma</span>
+                            <span class="tag">Sleep Deprivation</span>
+                        </div>
+                        <div class="mapping"><strong>Mapping:</strong> Supports Para 63-81 - threats on life, sleep deprivation, psychological torture, microchip effects.</div>
+                    </div>
+                </div>
+
+            </div><!-- end gallery-grid -->
+
+            <!-- EVIDENCE INDEX SUMMARY -->
+            <div style="margin-top:2.5rem; padding:1.5rem; background:#f8f9fa; border:1px solid #ddd; border-radius:8px;">
+                <p style="font-weight:700; font-size:1.1rem; margin-bottom:0.8rem;">&#128203; Evidence Index Summary</p>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:0.4rem; font-size:0.85rem;">
+                    <div><strong>Exhibit A-1:</strong> Crypto/Casino &#8594; Para 16-18</div>
+                    <div><strong>Exhibit A-2:</strong> Telegram &#8594; Para 18</div>
+                    <div><strong>Exhibit B-1:</strong> Rat Poison &#8594; Para 24-27</div>
+                    <div><strong>Exhibit C-1:</strong> Tampering &#8594; Para 30-47</div>
+                    <div><strong>Exhibit D-1:</strong> Insider Ops &#8594; Para 50-53</div>
+                    <div><strong>Exhibit E-1:</strong> IT Shadow &#8594; Para 54-62</div>
+                    <div><strong>Exhibit F-1:</strong> Legal History &#8594; Para 82-87</div>
+                    <div><strong>Exhibit G-1:</strong> Medical Records &#8594; Para 63-81</div>
+                </div>
+                <p style="margin-top:0.8rem; font-size:0.8rem; color:#666; border-top:1px solid #ddd; padding-top:0.8rem;">
+                    &#9432; This evidence gallery is for case reference and mapping purposes. All items listed are subject to verification.
+                </p>
+            </div>
+
+        </div><!-- end evidence-section -->
+
+    </div><!-- end container -->
 </body>
 </html>
